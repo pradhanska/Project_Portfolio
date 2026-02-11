@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradhan - Full Stack Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">Pradhan Shrinivas Kamath</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <a href="#home" class="nav-link active" data-section="home">Home</a>
+                    <a href="#about" class="nav-link" data-section="about">About</a>
+                    <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                    <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                    <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="highlight">Mechanical Engineer</span> &
+                        <span class="highlight">Full Stack</span> Developer
+                    </h1>
+                    <p class="hero-subtitle">
+                        Combining CAD design expertise with full-stack web development. Building scalable applications and innovative solutions using modern technologies.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">View My Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                    <div class="hero-tech-stack">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">Spring Boot</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">SolidWorks</span>
+                        <span class="tech-badge">ANSYS</span>
+                        <span class="tech-badge">REST APIs</span>
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS3</span>
+                        <span class="tech-badge">JavaFX</span>
+                        <span class="tech-badge">GitHub</span>
+                        <span class="tech-badge">Gen AI</span>
+                        <span class="tech-badge">Hibernate</span>
+                    </div>
+                </div>
+                <div class="hero-visual" data-aos="fade-left">
+                    <div class="floating-card">
+                        <div class="code-snippet">
+                            <div class="code-header">
+                                <span>system.py</span>
+                                <span class="code-dots">• • •</span>
+                            </div>
+                            <pre><code>def build_future():
+    while ambitious:
+        learn()
+        create()
+        innovate()</code></pre>
+                        </div>
+                    </div>
+                    <div class="floating-sphere"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg class="mouse" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M6 9C6 7.9 6.9 7 8 7H16C17.1 7 18 7.9 18 9V18C18 19.1 17.1 20 16 20H8C6.9 20 6 19.1 6 18V9Z" stroke-width="2"/>
+                <path class="scroll-wheel" d="M12 11V14" stroke-width="2"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p>
+                        Mechanical engineer turned full-stack developer with hands-on experience in CAD design, product development, and web application development. Proficient in building responsive full-stack applications using modern technologies including React, Node.js, Java Spring Boot, and PostgreSQL. Passionate about solving real-world problems through innovative design thinking and agile development methodologies.
+                    </p>
+                    <p>
+                        Skilled in mechanical design using SolidWorks, stress analysis with ANSYS, and developing scalable web applications. Seeking opportunities to leverage both technical and creative skills in building impactful digital products and contributing to meaningful projects.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat" data-aos="zoom-in" data-aos-delay="100">
+                            <h3>1+</h3>
+                            <p>Years Professional Experience</p>
+                        </div>
+                        <div class="stat" data-aos="zoom-in" data-aos-delay="200">
+                            <h3>6</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat" data-aos="zoom-in" data-aos-delay="300">
+                            <h3>5</h3>
+                            <p>Internships & Roles</p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                        <h4 style="margin-bottom: 0.5rem;">Education</h4>
+                        <p style="margin: 0.5rem 0; font-size: 0.95rem;">
+                            <strong>Bachelor of Engineering in Mechanical Engineering</strong><br>
+                            R.V. Institute of Technology & Management, Bangalore (Sept 2019 – Aug 2023)
+                        </p>
+                        <p style="margin: 0.5rem 0; font-size: 0.95rem;">
+                            <strong>Senior Secondary (CBSE)</strong><br>
+                            Bangalore International Academy (May 2017 – Mar 2019)
+                        </p>
+                    </div>
+                </div>
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="skill-sphere">
+                        <div class="sphere-item">CAD Design</div>
+                        <div class="sphere-item">Frontend</div>
+                        <div class="sphere-item">Backend</div>
+                        <div class="sphere-item">Database</div>
+                        <div class="sphere-item">Product Design</div>
+                        <div class="sphere-item">Web Dev</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
+            <div class="skills-grid">
+                <!-- Frontend -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="0">
+                    <div class="skill-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>HTML5 / CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Responsive Design</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend & APIs</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>Node.js / Express</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Java / Spring Boot</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>REST APIs</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 87%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database & Tools -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Database & Tools</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>PostgreSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>MySQL / Oracle</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>GitHub / Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Hibernate</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design & CAD -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-header">
+                        <i class="fas fa-cube"></i>
+                        <h3>CAD & Design</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>SolidWorks</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>ANSYS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Mechanical Design</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>VS Code / Eclipse</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emerging Tech -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>Emerging Tech</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>Generative AI</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaFX</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Object-Oriented Programming</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Design Thinking</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="project-image">
+                        <div class="project-placeholder">Personal Portfolio</div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-btn">View Project</a>
+                            <a href="https://github.com" class="project-btn">Source Code</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>Built a responsive personal portfolio showcasing projects and professional experience. Integrated contact forms, GitHub-linked projects, and implemented an accessible, modern design. Deployed using GitHub Pages for easy sharing and collaboration.</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>GitHub Pages</span>
+                            <span>Responsive Design</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-placeholder">Task Manager App</div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-btn">View Project</a>
+                            <a href="https://github.com" class="project-btn">Source Code</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Manager Web App</h3>
+                        <p>Developed a full-stack to-do list application using Node.js, Express, and EJS templating. Integrated PostgreSQL for persistent data storage and session tracking. Implemented user authentication and complete CRUD operations for task management.</p>
+                        <div class="project-tags">
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>PostgreSQL</span>
+                            <span>EJS</span>
+                            <span>Authentication</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="project-placeholder">Java To-Do App</div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-btn">View Project</a>
+                            <a href="https://github.com" class="project-btn">Source Code</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Java To-Do Application</h3>
+                        <p>Built an interactive desktop task manager using JavaFX with object-oriented programming principles. Designed a dynamic user interface featuring smooth animations and modular architecture for easy maintenance and extensibility.</p>
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>JavaFX</span>
+                            <span>OOP</span>
+                            <span>Desktop Application</span>
+                            <span>UI/UX</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <div class="project-placeholder">Expense Tracker</div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-btn">View Project</a>
+                            <a href="https://github.com" class="project-btn">Source Code</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Expense Tracker Web App</h3>
+                        <p>Developed a scalable REST API using Spring Boot with secure authentication mechanisms. Integrated PostgreSQL for data persistence and implemented Role-Based Access Control (RBAC) with session handling. Packaged as a deployable JAR and published via Git.</p>
+                        <div class="project-tags">
+                            <span>Spring Boot</span>
+                            <span>PostgreSQL</span>
+                            <span>REST APIs</span>
+                            <span>RBAC</span>
+                            <span>Maven</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <div class="project-placeholder">BNiO₃ Nanoparticles</div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-btn">View Project</a>
+                            <a href="#" class="project-btn">Documentation</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>BNiO₃ Nanoparticles for Photocatalytic Hydrogen Production</h3>
+                        <p>Designed and executed experimental workflows to test hydrogen generation efficiency of nanoparticles. Documented and analyzed performance data for comprehensive material evaluation and optimization of photocatalytic properties.</p>
+                        <div class="project-tags">
+                            <span>Materials Science</span>
+                            <span>Photocatalysis</span>
+                            <span>Hydrogen Production</span>
+                            <span>Data Analysis</span>
+                            <span>Research</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <div class="project-placeholder">Metallurgical Machine</div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-btn">View Design</a>
+                            <a href="#" class="project-btn">Documentation</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Metallurgical Sample Cutting Machine</h3>
+                        <p>A design thinking project that involved modeling mechanical systems in SolidWorks and testing load conditions using ANSYS. Iteratively optimized the design for structural integrity and reliability, demonstrating problem-solving and CAD expertise.</p>
+                        <div class="project-tags">
+                            <span>SolidWorks</span>
+                            <span>ANSYS</span>
+                            <span>Mechanical Design</span>
+                            <span>Design Optimization</span>
+                            <span>CAD</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="0">
+                    <div class="timeline-content">
+                        <h3>Mechanical Design Engineer</h3>
+                        <p class="company">Conceptia Software Technologies | Aug 2023 - Sep 2024</p>
+                        <p class="description">
+                            Gained hands-on experience in SOLIDWORKS CAD software through structured training and achieved SOLIDWORKS certification. Developed foundational knowledge in product design with focus on automation and industry standards.
+                        </p>
+                        <ul class="achievements">
+                            <li>Completed SOLIDWORKS certification training program</li>
+                            <li>Trained on Manufacturing Tools including sheet metal design and structural analysis</li>
+                            <li>Gained expertise in weldment cutlist preparation and mold tools</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-date">Aug 2023 - Sep 2024</div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="timeline-content">
+                        <h3>Design And Analysis Intern</h3>
+                        <p class="company">CADWORKS INDIA Pvt Ltd | May 2024 - Jun 2024</p>
+                        <p class="description">
+                            Collaborated with engineering teams to develop innovative solutions. Conducted stress analysis and simulations to verify design integrity, created technical documentation, and demonstrated strong problem-solving under tight deadlines.
+                        </p>
+                        <ul class="achievements">
+                            <li>Designed and modeled mechanical components using SolidWorks</li>
+                            <li>Conducted ANSYS stress analysis and simulations for design verification</li>
+                            <li>Created technical documentation and design review presentations</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-date">May 2024 - Jun 2024</div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="timeline-content">
+                        <h3>Robotics and Automation Intern</h3>
+                        <p class="company">MTR Foods Private Limited | Sep 2022 - Oct 2022</p>
+                        <p class="description">
+                            Gained practical experience with robotics and automation systems in manufacturing environments. Applied theoretical knowledge to real-world industrial automation applications.
+                        </p>
+                        <ul class="achievements">
+                            <li>Hands-on experience with industrial robotics systems</li>
+                            <li>Understanding of automation workflows in food production</li>
+                            <li>Internship certification in Robotics and Automation</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-date">Sep 2022 - Oct 2022</div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="timeline-content">
+                        <h3>Design and Fabrication Intern</h3>
+                        <p class="company">VR Engineering Works | Aug 2022 - Sep 2022</p>
+                        <p class="description">
+                            Gained comprehensive experience in mechanical design and fabrication processes. Applied CAD skills to practical manufacturing scenarios.
+                        </p>
+                        <ul class="achievements">
+                            <li>Hands-on CAD modeling for mechanical components</li>
+                            <li>Understanding of fabrication and manufacturing processes</li>
+                            <li>Experience with design iteration and optimization</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-date">Aug 2022 - Sep 2022</div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="400">
+                    <div class="timeline-content">
+                        <h3>Marketing Coordinator</h3>
+                        <p class="company">E-cell RVITM | Aug 2019 - Aug 2023</p>
+                        <p class="description">
+                            Coordinated marketing initiatives for entrepreneurship cell at the institute. Developed organizational and communication skills while promoting startup ecosystem awareness.
+                        </p>
+                        <ul class="achievements">
+                            <li>Organized events and marketing campaigns</li>
+                            <li>Promoted entrepreneurship initiatives across campus</li>
+                            <li>Developed professional communication skills</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-date">Aug 2019 - Aug 2023</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Let's talk about everything!</h3>
+                    <p>I'm interested in opportunities and learning about new projects. Whether you have a question or just want to say hello, feel free to get in touch.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:pradhan.skamath@gmail.com">pradhan.skamath@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+919108368233">+91 9108368233</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Bengaluru, Karnataka, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/pradhan-shrinivas-kamath/" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" data-aos="fade-left" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tell me about your project..." rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Pradhan. All rights reserved. | Designed & Built with <span class="heart">♥</span> using modern web technologies</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
