@@ -1,13 +1,51 @@
 // ==================== INITIALIZATION ====================
 
 document.addEventListener('DOMContentLoaded', () => {
+    initThemeToggle();
     initNavigation();
     initAOS();
     initFormSubmission();
     initSmoothScroll();
     initScrollAnimations();
+    initSectionTransitions();
+    initScrollProgress();
+    initBackToTop();
+    initCursorGlow();
     initInteractiveElements();
 });
+
+const THEMES = [
+    { id: 'default', label: 'Default' },
+    { id: 'light', label: 'Light' },
+    { id: 'neo', label: 'Neo' }
+];
+
+function initThemeToggle() {
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeToggleLabel');
+    if (!toggle) return;
+
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    const startTheme = THEMES.some(theme => theme.id === savedTheme) ? savedTheme : 'default';
+    applyTheme(startTheme, label);
+
+    toggle.addEventListener('click', () => {
+        const currentTheme = document.body.getAttribute('data-theme') || 'default';
+        const currentIndex = THEMES.findIndex(theme => theme.id === currentTheme);
+        const nextTheme = THEMES[(currentIndex + 1) % THEMES.length];
+        applyTheme(nextTheme.id, label);
+    });
+}
+
+function applyTheme(themeId, labelElement) {
+    document.body.setAttribute('data-theme', themeId);
+    localStorage.setItem('portfolio-theme', themeId);
+
+    if (labelElement) {
+        const theme = THEMES.find(item => item.id === themeId);
+        labelElement.textContent = theme ? theme.label : 'Default';
+    }
+}
 
 // ==================== NAVIGATION ====================
 
@@ -102,7 +140,6 @@ function initFormSubmission() {
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            const formData = new FormData(form);
             const button = form.querySelector('button[type="submit"]');
             const originalText = button.textContent;
 
@@ -113,9 +150,9 @@ function initFormSubmission() {
             inputs.forEach(input => {
                 if (!input.value.trim()) {
                     isValid = false;
-                    input.style.borderColor = '#ef4444';
+                    input.style.borderColor = '#ffffff33';
                 } else {
-                    input.style.borderColor = 'rgba(0, 212, 255, 0.2)';
+                    input.style.borderColor = 'rgba(245, 245, 245, 0.12)';
                 }
             });
 
@@ -174,6 +211,73 @@ function initScrollAnimations() {
     statsElements.forEach(element => observer.observe(element));
 }
 
+// ==================== SECTION TRANSITIONS ====================
+
+function initSectionTransitions() {
+    const sections = document.querySelectorAll('.hero, .section');
+
+    if (!('IntersectionObserver' in window)) {
+        sections.forEach(section => section.classList.add('is-visible'));
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries, sectionObserver) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                sectionObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.18 });
+
+    sections.forEach(section => observer.observe(section));
+}
+
+function initScrollProgress() {
+    const progressBar = document.getElementById('scrollProgress');
+    if (!progressBar) return;
+
+    const updateProgress = () => {
+        const scrollTop = window.scrollY;
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollable > 0 ? (scrollTop / scrollable) * 100 : 0;
+        progressBar.style.width = `${progress}%`;
+    };
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+}
+
+function initBackToTop() {
+    const backToTopButton = document.getElementById('backToTop');
+    if (!backToTopButton) return;
+
+    const toggleVisibility = () => {
+        if (window.scrollY > 520) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    };
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
+    toggleVisibility();
+}
+
+function initCursorGlow() {
+    const glow = document.getElementById('cursorGlow');
+    if (!glow) return;
+
+    document.addEventListener('mousemove', (event) => {
+        glow.style.left = `${event.clientX}px`;
+        glow.style.top = `${event.clientY}px`;
+    });
+}
+
 // ==================== INTERACTIVE ELEMENTS ====================
 
 function initInteractiveElements() {
@@ -200,14 +304,6 @@ function initInteractiveElements() {
                 `;
             }
         }
-    });
-
-    // Sphere items interactive hover
-    const sphereItems = document.querySelectorAll('.sphere-item');
-    sphereItems.forEach(item => {
-        item.addEventListener('click', () => {
-            showNotification(`${item.textContent} skills selected`, 'success');
-        });
     });
 
     // Project card interaction
@@ -267,8 +363,8 @@ function showNotification(message, type = 'info') {
         top: 20px;
         right: 20px;
         padding: 16px 24px;
-        background: ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#00d4ff'};
-        color: white;
+        background: ${type === 'success' ? '#22c55e' : type === 'error' ? '#ef4444' : '#334155'};
+        color: #e2e8f0;
         border-radius: 8px;
         font-weight: 600;
         z-index: 9999;
@@ -417,7 +513,77 @@ document.querySelectorAll('a').forEach(link => {
 
 // ==================== CONSOLE GREETING ====================
 
-console.log('%c👋 Welcome to Pradhan\'s Portfolio!', 'font-size: 20px; font-weight: bold; color: #00d4ff; text-shadow: 0 0 10px #00d4ff;');
-console.log('%cBuilt with modern web technologies: React, Node.js, TypeScript, Docker, and more.', 'color: #a855f7; font-size: 14px;');
-console.log('%cFeel free to explore the code and reach out for collaboration! 🚀', 'color: #10b981; font-size: 14px;');
-console.log('%cGithub: github.com/pradhan | Email: pradhan@example.com | LinkedIn: linkedin.com/in/pradhan', 'color: #f59e0b; font-size: 12px;');
+console.log('%cWelcome to Pradhan\'s Portfolio', 'font-size: 20px; font-weight: 600; color: #f5f5f5;');
+console.log('%cBuilt with modern web technologies: React, Node.js, TypeScript, Docker, and more.', 'color: #b0b0b0; font-size: 14px;');
+console.log('%cFeel free to explore the code and reach out for collaboration.', 'color: #a6a6a6; font-size: 14px;');
+console.log('%cGithub: github.com/pradhan | Email: pradhan@example.com | LinkedIn: linkedin.com/in/pradhan', 'color: #8c8c8c; font-size: 12px;');
+// ================= TECH FILTER SYSTEM =================
+
+function initTechFilter() {
+    const techButtons = document.querySelectorAll('.tech-badge');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    techButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const selectedTech = button.getAttribute('data-filter');
+            const isAlreadyActive = button.classList.contains('active');
+            const isAllFilter = selectedTech === 'all';
+
+            // Clicking the active badge clears filtering.
+            if (isAlreadyActive || isAllFilter) {
+                techButtons.forEach(btn => btn.classList.remove('active'));
+                if (!isAlreadyActive && isAllFilter) {
+                    button.classList.add('active');
+                }
+                projectCards.forEach(card => {
+                    card.classList.remove('hidden');
+                    card.classList.remove('highlighted');
+                });
+                const projectsSection = document.getElementById('projects');
+                if (projectsSection) {
+                    projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                return;
+            }
+
+            techButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const matchingCards = [];
+
+            projectCards.forEach(card => {
+                const techList = (card.getAttribute('data-tech') || '').toLowerCase();
+                const hasMatch = techList.split(/\s+/).includes((selectedTech || '').toLowerCase());
+
+                card.classList.remove('highlighted');
+
+                if (hasMatch) {
+                    matchingCards.push(card);
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Prevent blank project area when no project matches a selected tech.
+            if (matchingCards.length === 0) {
+                button.classList.remove('active');
+                projectCards.forEach(card => {
+                    card.classList.remove('hidden');
+                    card.classList.remove('highlighted');
+                });
+                showNotification(`No project tagged with "${selectedTech}" yet.`, 'info');
+                return;
+            }
+
+            setTimeout(() => {
+                matchingCards.forEach(card => card.classList.add('highlighted'));
+            }, 250);
+
+            // Scroll to the first relevant project card for the selected technology.
+            matchingCards[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    });
+}
+
+initTechFilter();
