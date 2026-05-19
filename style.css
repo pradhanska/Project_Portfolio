@@ -361,6 +361,7 @@ body::after {
     margin-bottom: var(--spacing-md);
     font-weight: 800;
     letter-spacing: -1px;
+    padding-top: 20px;
 }
 
 .hero-title .highlight {
