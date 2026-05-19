@@ -1592,6 +1592,46 @@ body::after {
     transform: translateY(0);
 }
 
+@media (max-width: 768px) {
+    #experience,
+    #experience.section,
+    .timeline,
+    .timeline-item,
+    .timeline-content,
+    .timeline-date {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+    }
+
+    .timeline {
+        padding: 0;
+    }
+
+    .timeline-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .timeline-content {
+        text-align: left !important;
+        width: 100%;
+    }
+
+    .timeline-date {
+        text-align: left;
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline::before,
+    .timeline-item::before {
+        display: none !important;
+    }
+}
+
 img,
 svg,
 canvas,
